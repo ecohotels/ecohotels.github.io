@@ -29,23 +29,23 @@
 
             /* Global Styles */
             body {
-                background-color: #f9f9f9;
-                color: #333;
-                line-height: 1.6;
                 margin: 0;
                 padding: 0;
             }
 
-            .container {
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 20px;
+            #map-container {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
             }
 
             header {
                 background-color: #1a73e8;
                 color: #fff;
-                padding: 40px 0;
+                padding: 20px 0;
                 text-align: center;
                 border-bottom-left-radius: 20px;
                 border-bottom-right-radius: 20px;
@@ -60,40 +60,22 @@
                 letter-spacing: 2px;
             }
 
-            nav ul {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            nav ul li {
-                margin: 0 15px;
-            }
-
-            nav ul li a {
-                color: #fff;
-                font-size: 1.2rem;
-                transition: color 0.3s ease;
-                text-transform: uppercase;
-            }
-
-            nav ul li a:hover {
-                color: #eaeaea;
-            }
-
             .search-form {
-                background-color: #fff;
-                padding: 40px;
-                margin-top: 30px;
-                border-radius: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 20px;
+                border-radius: 10px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 text-align: center;
             }
 
             .search-form input[type="text"],
             .search-form input[type="date"] {
-                width: calc(33.33% - 20px);
-                margin: 15px 10px;
+                width: calc(100% - 40px);
+                margin-bottom: 15px;
                 padding: 15px;
                 border: 1px solid #ccc;
                 border-radius: 5px;
@@ -123,6 +105,10 @@
                 text-align: center;
                 border-top-left-radius: 20px;
                 border-top-right-radius: 20px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
             }
 
             footer p {
@@ -133,29 +119,26 @@
     </head>
 
     <body>
+        <div id="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162913.9997304371!2d-122.6918241!3d45.5123054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495a434c247bd71%3A0x1b379e35afe921f0!2sPortland%2C%20OR%2C%20USA!5e0!3m2!1sen!2s!4v1646228640260!5m2!1sen!2s"
+                width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+        </div>
+
         <header>
             <div class="container">
                 <h1 class="logo">One Flight One Tree</h1>
-                <nav>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#mission">Mission</a></li>
-                        <li><a href="#benefits">Benefits</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
             </div>
         </header>
 
-        <div class="container">
-            <div class="search-form">
-                <form action="#" method="GET">
-                    <input type="text" name="from" placeholder="From" required>
-                    <input type="text" name="to" placeholder="To" required>
-                    <input type="date" name="date" required>
-                    <button type="submit">Search Flights</button>
-                </form>
-            </div>
+        <div class="search-form">
+            <form action="#" method="GET">
+                <input type="text" name="from" placeholder="From" required>
+                <input type="text" name="to" placeholder="To" required>
+                <input type="date" name="date" required>
+                <button type="submit">Search Flights</button>
+            </form>
         </div>
 
         <footer>
