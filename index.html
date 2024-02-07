@@ -5,10 +5,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>One Flight One Tree - Plant a Tree with Every Flight</title>
-        <meta name="description"
-            content="Offset your carbon footprint and combat deforestation by booking flights with One Flight One Tree. Join us in our mission for a greener planet.">
-        <meta name="keywords" content="flight, travel, carbon offset, tree planting, environment, sustainability">
-        <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <style>
             /* Reset Styles */
@@ -33,27 +29,35 @@
 
             /* Global Styles */
             body {
-                background-color: #f2f2f2;
+                background-color: #f9f9f9;
                 color: #333;
                 line-height: 1.6;
+                margin: 0;
+                padding: 0;
             }
 
             .container {
                 max-width: 1200px;
                 margin: 0 auto;
-                padding: 0 20px;
+                padding: 20px;
             }
 
             header {
-                background-color: #fff;
-                padding: 20px 0;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                background-color: #1a73e8;
+                color: #fff;
+                padding: 40px 0;
+                text-align: center;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             }
 
             .logo {
                 font-weight: bold;
-                font-size: 1.5rem;
-                color: #1a73e8;
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
             }
 
             nav ul {
@@ -67,28 +71,29 @@
             }
 
             nav ul li a {
-                color: #333;
-                font-weight: bold;
+                color: #fff;
                 font-size: 1.2rem;
                 transition: color 0.3s ease;
+                text-transform: uppercase;
             }
 
             nav ul li a:hover {
-                color: #1a73e8;
+                color: #eaeaea;
             }
 
             .search-form {
                 background-color: #fff;
-                padding: 20px;
+                padding: 40px;
                 margin-top: 30px;
-                border-radius: 5px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                border-radius: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                text-align: center;
             }
 
             .search-form input[type="text"],
             .search-form input[type="date"] {
                 width: calc(33.33% - 20px);
-                margin-right: 10px;
+                margin: 15px 10px;
                 padding: 15px;
                 border: 1px solid #ccc;
                 border-radius: 5px;
@@ -110,6 +115,20 @@
             .search-form button:hover {
                 background-color: #0d47a1;
             }
+
+            footer {
+                background-color: #1a73e8;
+                color: #fff;
+                padding: 20px 0;
+                text-align: center;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+
+            footer p {
+                font-size: 1rem;
+                letter-spacing: 1px;
+            }
         </style>
     </head>
 
@@ -130,7 +149,7 @@
 
         <div class="container">
             <div class="search-form">
-                <form action="search.php" method="GET">
+                <form action="#" method="GET">
                     <input type="text" name="from" placeholder="From" required>
                     <input type="text" name="to" placeholder="To" required>
                     <input type="date" name="date" required>
@@ -138,8 +157,6 @@
                 </form>
             </div>
         </div>
-
-        <!-- Other sections like About, Mission, Benefits, Contact can be added here -->
 
         <footer>
             <div class="container">
